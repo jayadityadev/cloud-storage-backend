@@ -1,5 +1,5 @@
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
-org: jayaditya
+org: divykoushik
 service: cloud-storeage-app
 
 provider:
@@ -10,6 +10,7 @@ provider:
     CLERK_SECRET_KEY: ${env:CLERK_SECRET_KEY}
     CLERK_PUBLISHABLE_KEY: ${env:CLERK_PUBLISHABLE_KEY}
     CLERK_WEBHOOK_SECRET: ${env:CLERK_WEBHOOK_SECRET}
+    MONGO_URI: ${env:MONGO_URI}
 
 functions:
   app:

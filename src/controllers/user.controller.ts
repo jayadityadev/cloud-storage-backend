@@ -2,7 +2,9 @@ import { Request, Response } from 'express';
 import { User } from '../models/user.model';
 
 export const handleClerkUserCreated = async (req: Request, res: Response) => {
-  const { id, email_addresses, first_name, last_name } = req.body.data;
+  
+  const requestData = JSON.parse(req.body);  
+  const { id, email_addresses, first_name, last_name } = requestData.data;
 
   const email = email_addresses?.[0]?.email_address;
 
